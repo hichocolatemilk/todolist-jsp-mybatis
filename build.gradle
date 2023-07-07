@@ -36,7 +36,6 @@ dependencies {
     implementation 'taglibs:standard:1.1.2'
 
 }
-
 tasks.named('test') {
     useJUnitPlatform()
 }
