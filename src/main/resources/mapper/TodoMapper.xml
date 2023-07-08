@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.jsp.todolist.dao.TodoDao">
+    <insert id="add" parameterType="com.jsp.todolist.dto.Todo">
+        insert into todo(id, title, content)
+        values(#{id}, #{title}, #{content})
+    </insert>
+    <update id="update" parameterType="map">
+        update todo
+        set title = #{title}, content = #{content}
+        where id = #{id}
+    </update>
+    <delete id="delete" parameterType="long">
+        delete from todo
+        where id = #{id}
+    </delete>
+
+    <select id="getList" resultType="com.jsp.todolist.dto.Todo">
+        select *
+        from Todo order by id desc
+    </select>
+    <select id="get" resultType="com.jsp.todolist.dto.Todo">
+        select *
+        from Todo
+        where id = #{id}
+    </select>
+</mapper>
