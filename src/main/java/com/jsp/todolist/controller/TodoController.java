@@ -1,7 +1,12 @@
-package com.jspmybatis.todolist.controller;
+package com.jsp.todolist.controller;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequiredArgsConstructor
 public class TodoController {
+
+
+
 }
