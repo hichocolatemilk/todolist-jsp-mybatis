@@ -2,6 +2,7 @@ package com.jsp.todolist.dao;
 
 import com.jsp.todolist.dto.Todo;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -17,4 +18,6 @@ public interface TodoDao {
     public void update(Todo todo);
 
     public void delete(Long id);
+
+
 }

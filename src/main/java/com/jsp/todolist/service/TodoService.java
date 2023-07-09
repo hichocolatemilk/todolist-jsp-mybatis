@@ -1,6 +1,7 @@
 package com.jsp.todolist.service;
 
 import com.jsp.todolist.dto.Todo;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -13,5 +14,7 @@ public interface TodoService {
 
     public void update(Todo todo);
 
+
     public void delete(Long id);
+
 }

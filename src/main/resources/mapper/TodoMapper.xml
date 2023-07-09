@@ -5,26 +5,26 @@
 
 <mapper namespace="com.jsp.todolist.dao.TodoDao">
     <insert id="add" parameterType="com.jsp.todolist.dto.Todo">
-        insert into todo(id, title, content)
-        values(#{id}, #{title}, #{content})
+        INSERT INTO todo(id, title, content)
+        VALUES(#{id}, #{title}, #{content})
     </insert>
-    <update id="update" parameterType="map">
-        update todo
-        set title = #{title}, content = #{content}
-        where id = #{id}
+    <update id="update" parameterType="com.jsp.todolist.dto.Todo">
+        UPDATE todo
+        SET title = #{title}, content = #{content}
+        WHERE id = #{id}
     </update>
     <delete id="delete" parameterType="long">
-        delete from todo
-        where id = #{id}
+        DELETE FROM todo
+        WHERE id = #{id}
     </delete>
 
     <select id="getList" resultType="com.jsp.todolist.dto.Todo">
-        select *
-        from Todo order by id desc
+        SELECT *
+        FROM Todo ORDER BY id desc
     </select>
     <select id="get" resultType="com.jsp.todolist.dto.Todo">
-        select *
-        from Todo
-        where id = #{id}
+        SELECT *
+        FROM Todo
+        WHERE id = #{id}
     </select>
 </mapper>
