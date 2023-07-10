@@ -5,8 +5,8 @@
 
 <mapper namespace="com.jsp.todolist.dao.TodoDao">
     <insert id="add" parameterType="com.jsp.todolist.dto.Todo">
-        INSERT INTO todo(id, title, content)
-        VALUES(#{id}, #{title}, #{content})
+        INSERT INTO todo(title, content)
+        VALUES(#{title}, #{content})
     </insert>
     <update id="update" parameterType="com.jsp.todolist.dto.Todo">
         UPDATE todo
